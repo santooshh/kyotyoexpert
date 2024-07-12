@@ -1,6 +1,6 @@
 
-<?php include("../assets/php/header-nav.html");?>
 
+    <div id="header"></div>
 
 <section>
     <div class="slideshow-container">
@@ -23,8 +23,8 @@
   <div class="slide-text">Bamboo-Forest</div>
 </div>
 
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+<a class="prev" onclick="plusSlides(-1)"><</a>
+<a class="next" onclick="plusSlides(1)">></a>
 
 </div>
 <br>
@@ -49,14 +49,14 @@
 
 
 
-           <a href="how-to-manage-garbage.php" class="grid-item">
+           <a href="how-to-manage-garbage.html" class="grid-item">
             <img src="../img/garbage-1.jpg" alt="Sample Image">
             <h1>How to manage garbage</h1>
             <div class="grid-text">Kyoto's garbage management system requires residents to segregate waste into burnable, non-burnable, and recyclable categories. Detailed guidelines and collection schedules ensure efficient disposal, promoting recycling and waste reduction. Non-compliance results in penalties, encouraging environmental sustainability.</div>
         </a>
 
 
-        <a href="how-to-use-train.php" class="grid-item">
+        <a href="how-to-use-train.html" class="grid-item">
             <img src="../img/train-1.jpg" alt="Sample Image">
             <h1>How to use public train</h1>
             <div class="grid-text">
@@ -65,7 +65,7 @@
 
 
 
-           <a href="how-to-use-bus.php" class="grid-item">
+           <a href="how-to-use-bus.html" class="grid-item">
             <img src="../img/slider-bus-1.jpg" alt="Sample Image">
             <h1>How to use public bus</h1>
             <div class="grid-text">In Kyoto, using public buses is easy and convenient. Board from the rear, pay with exact change, an IC card, or a day pass upon exiting at the front, and use the stop button before your destination. Multilingual route maps and announcements aid navigation.</div>
@@ -73,7 +73,7 @@
 
 
 
-            <a href="initial-office-work.php" class="grid-item">
+            <a href="initial-office-work.html" class="grid-item">
             <img src="../img/government-1.jpg" alt="Sample Image">
             <h1>Administrative works</h1>
             <div class="grid-text">International students typically need to register at the local ward office, obtain an insurance card, and open a bank account upon arrival. They also require a passport, visa, admission letter, proof of financial support, and possibly a residence permit.</div>
@@ -81,7 +81,7 @@
 
 
 
-            <a href="japanese-culture.php" class="grid-item">
+            <a href="japanese-culture.html" class="grid-item">
             <img src="../img/japanese-culture-1.jpg" alt="Sample Image">
             <h1>Japanese Culture</h1>
             <div class="grid-text">
@@ -90,7 +90,7 @@
 
 
 
-            <a href=" affordable-living.php" class="grid-item">
+            <a href=" affordable-living.html" class="grid-item">
             <img src="../img/affordable-1.jpg" alt="Sample Image">
             <h1>Affordable Living</h1>
             <div class="grid-text">
@@ -101,11 +101,11 @@
     </div>
 
 <div class="click-here-container">
-        <a href="your-guide.php" class="click-here">View More...</a>
+        <a href="your-guide.html" class="click-here">View More...</a>
     </div>
-       
+
 </section>
-<?php include("../assets/php/footer.html");?>
+           <div id="footer"></div>
 
 
 
@@ -165,6 +165,23 @@ autoSlides(); // Call autoSlides to start the slideshow
             });
         });
     </script>
+
+<script>
+
+function loadHTML(url, elementId) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.log('Error loading HTML:', error));
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadHTML('header-nav.html', 'header');
+    loadHTML('footer.html', 'footer');
+});
+</script>
 
 </body>
 </html>

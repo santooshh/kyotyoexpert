@@ -1,11 +1,5 @@
- <?php include("../assets/php/header-nav.html");?>
- <?php
-    if(isset($_POST['save'])){
-        $sql = "INSERT INTO users (username, password, email)
-        VALUES ('".$_POST["username"]."','".$_POST["password"]."','".$_POST["email"]."')";
-    }
+    <div id="header"></div>
 
-    ?>
 <section>
 	<div class="contact-description">
 		<img src="../img/contact.jpg">
@@ -39,4 +33,21 @@
 </section>
 
  
-<?php include("../assets/php/footer.html");?>
+<div id="footer"></div>
+
+<script>
+
+function loadHTML(url, elementId) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.log('Error loading HTML:', error));
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadHTML('header-nav.html', 'header');
+    loadHTML('footer.html', 'footer');
+});
+</script>

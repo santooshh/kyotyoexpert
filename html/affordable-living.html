@@ -1,4 +1,3 @@
-<?php include("../assets/php/header-nav.html");?>
 
  
 
@@ -29,6 +28,9 @@
             padding-left: 10px;
         }
     </style>
+
+        <div id="header"></div>
+
 <section>
 
 <div class="your-guide-description">
@@ -63,4 +65,21 @@
   </ul>
 </div>
 </section>
-    <?php include("../assets/php/footer.html");?>
+<div id="footer"></div>
+
+<script>
+
+function loadHTML(url, elementId) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.log('Error loading HTML:', error));
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadHTML('header-nav.html', 'header');
+    loadHTML('footer.html', 'footer');
+});
+</script>
