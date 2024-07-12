@@ -1,0 +1,94 @@
+
+.your-guide-slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.your-guide-slide {
+    display: none;
+}
+
+.slider-image {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    height: 650px;
+}
+
+.slider-image:hover {
+    transform: scale(1.1);
+}
+
+ .your-guide-prev, .your-guide-next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+/*          padding: 16px;*/
+          margin-top: -22px;
+          color: black;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+
+
+ .your-guide-next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+.your-guide-prev:hover, .your-guide-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.bus-description{
+  margin: 40px 90px 40px 40px ;
+
+
+
+}

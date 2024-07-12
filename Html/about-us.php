@@ -1,0 +1,81 @@
+ <?php include("../assets/php/header-nav.html");?>
+<section>
+
+
+        <h2>Learn About KyotoExpert</h2>
+        <div class="image-text-section">
+            <img src="../img/Kyotyo.jpg" style="object-fit: contain;" alt="Natural Wonder">
+            <div class="text">
+                <h3>Know About US</h3>
+                <p>
+KyotoExpert is an informative site designed to help newly arrived students settle and overcome difficulties while living in Kyoto. The website provides essential information on navigating the city, obtaining necessary documents such as a bank account, Japanese mobile number, insurance, and Japanese social number, and finding part-time jobs and affordable apartment rentals. Additionally, it offers guidance on using public transportation, managing garbage, using digital cards, and finding affordable shopping places. Students can also learn about Kyoto's culture and local customs, ensuring they can adapt smoothly to their new environment and fully enjoy their experience in this vibrant city.</p>
+            </div>
+        </div>
+
+ <div class="team-section">
+        <h1>MEET OUR TEAM</h1>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="../img/santosh.jpg" alt="Santosh Ghimire">
+                <h3>Santosh Ghimire</h3>
+            </div>
+
+            <div class="team-member">
+                <img src="../img/prem.jpeg" alt="Prem">
+                <h3>Prem Nath Kumar</h3>
+            </div>
+
+                <div class="team-member">
+                <img src="../img/Udesuka.jpeg" alt="Mitchell Fawcett">
+                <h3>Udesuka</h3>
+            </div>
+
+
+
+             <div class="team-member">
+                <img src="../img/Udesika.jpeg" alt="Udesika">
+                <h3>Udesika</h3>
+            </div>  
+
+
+            <div class="team-member">
+                <img src="../img/Ramesh.jpeg" alt="Ramesh">
+                <h3>Ramesh Adhikari</h3>
+            </div>
+            
+           
+            <div class="team-member">
+                <img src="../img/Clondrina.jpeg" alt="Clondrina">
+                <h3>Clondrina Kevin</h3>
+            </div>
+            <div class="team-member">
+                <img src="../img/Prakash.jpeg" alt="Prakash GC">
+                <h3>Prakash GC</h3>
+            </div>
+            <div class="team-member">
+                <img src="../img/kiran.jpeg" alt="Kiran Gautam">
+                <h3>Kiran Gautam</h3>
+            </div>
+           
+        </div>
+    </div>
+</section>
+<?php include("../assets/php/footer.html");?>
+
+<script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const textElements = document.querySelectorAll('.grid-item .text');
+
+            textElements.forEach(el => {
+                const originalText = el.innerText;
+                const words = originalText.split(' ');
+
+                if (words.length > 50) {
+                    const truncatedText = words.slice(0, 50).join(' ') + '...';
+                    el.innerText = truncatedText;
+                    el.title = originalText; // Show the full text on hover
+                }
+            });
+        });
+    </script>
